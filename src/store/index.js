@@ -1,6 +1,6 @@
-import { createStore, compose } from "redux";
+import { createStore } from "redux";
 
-import books from "./products";
+import books from "./books";
 
 const appReducer = books;
 
@@ -10,9 +10,7 @@ const rootReducer = (state, action) => {
 
 export default createStore(
   rootReducer,
-  compose(
-    window.__REDUX_DEVTOOLS_EXTENSION__
-      ? window.__REDUX_DEVTOOLS_EXTENSION__({ trace: true })
-      : (f) => f
-  )
+  window.__REDUX_DEVTOOLS_EXTENSION__
+    ? window.__REDUX_DEVTOOLS_EXTENSION__({ trace: true })
+    : (f) => f
 );

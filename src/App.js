@@ -1,7 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getBooks } from "./store/books";
+import { books } from "./books";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks(books));
+  }, [dispatch]);
+
   return (
     <div className="App">
       <header className="App-header">
