@@ -1,0 +1,9 @@
+.headerNav {
+  display: flex;
+  justify-content: center;
+  font-family: "Pinyon Script", cursive;
+  font-size: 5em;
+  height: 1.5em;
+  border-bottom: 1px solid black;
+  align-items: center;
+}
