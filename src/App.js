@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { getBooks } from "./store/books";
 import { books } from "./books";
 import Navbar from "./Components/Navbar/Navbar";
+import Books from "./Components/Books/Books";
 
 function App() {
   const dispatch = useDispatch();
@@ -14,6 +15,9 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <div className="container">
+        <Books />
+      </div>
     </div>
   );
 }
