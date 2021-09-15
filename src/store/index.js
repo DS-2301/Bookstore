@@ -1,8 +1,8 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 
 import books from "./books";
 
-const appReducer = books;
+const appReducer = combineReducers({ books });
 
 const rootReducer = (state, action) => {
   return appReducer(state, action);
