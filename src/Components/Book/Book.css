@@ -1,5 +1,5 @@
 .bookCard {
-  width: 12vw;
+  width: 11vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +11,12 @@
   margin: 2vw;
   padding: 2vw;
   font-family: "Raleway", sans-serif;
+  transition: box-shadow 1s;
+}
+
+.bookCard:hover {
+  box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 11px 15px -7px rgba(0, 0, 0, 0.2);
 }
 
 .topBookRow {
@@ -20,9 +26,15 @@
 .deleteBook {
   border: none;
   background: none;
+  color: gray;
   height: 1em;
   font-size: 1.5em;
   cursor: pointer;
+  transition: color 0.5s;
+}
+
+.deleteBook:hover {
+  color: black;
 }
 
 .bookImage {
@@ -42,4 +54,66 @@
 .bookPrice {
   font-size: 1.5em;
   margin-top: 0.5em;
+}
+
+.editBookModal {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 43vh;
+  top: 20%;
+  left: 38%;
+  right: auto;
+  bottom: auto;
+  border: black solid 1px;
+  border-radius: 1em;
+  padding: 0 2vw 2vw 2vw;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+}
+
+.bookModalTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editBookForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.editBookFormRow {
+  padding-bottom: 1em;
+  display: flex;
+}
+
+.editBookFormRow > input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.editBookFormRow > textarea {
+  border: 1px solid black;
+}
+
+.editBookFormLabel {
+  width: 7em;
+}
+
+.editBookDescription {
+  height: 8em;
+  width: 11em;
+}
+
+.editBookSubmit {
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 0.5em;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin: auto;
 }
