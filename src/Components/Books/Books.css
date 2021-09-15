@@ -1,0 +1,4 @@
+.booksPane {
+  display: flex;
+  flex-wrap: wrap;
+}
