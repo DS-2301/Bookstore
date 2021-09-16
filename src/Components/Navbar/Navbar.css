@@ -34,3 +34,33 @@
   color: white;
   background-color: black;
 }
+
+@media only screen and (max-width: 1024px) {
+  .addBookButton {
+    font-size: 0.3em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .addBookButton {
+    left: 75%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .headerNav {
+    font-size: 3em;
+    justify-content: space-around;
+  }
+
+  .addBookButton {
+    position: inherit;
+    font-size: 0.4em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .headerNav {
+    font-size: 2.5em;
+  }
+}

@@ -62,7 +62,7 @@
   display: flex;
   flex-direction: column;
   width: 20vw;
-  height: 43vh;
+  height: max-content;
   top: 20%;
   left: 38%;
   right: auto;
@@ -118,4 +118,52 @@
   font-size: 1em;
   padding: 1em 2em;
   margin: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .BookModal {
+    font-size: 2em;
+  }
+
+  .BookFormRow > input {
+    font-size: 1em;
+  }
+
+  .BookFormRow > textarea {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .BookModal {
+    width: 30vw;
+    left: 35%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .BookModal {
+    width: 40vw;
+    left: 30%;
+  }
+  .bookCard {
+    width: 20vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .bookCard {
+    width: 60vw;
+    height: 40vh;
+  }
+
+  .bookImage {
+    margin-bottom: 1em;
+    width: 20vw;
+    margin-left: 2em;
+  }
+  .BookModal {
+    width: 70vw;
+    left: 15%;
+  }
 }
