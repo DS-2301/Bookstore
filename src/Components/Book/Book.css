@@ -56,7 +56,7 @@
   margin-top: 0.5em;
 }
 
-.editBookModal {
+.BookModal {
   background-color: white;
   position: relative;
   display: flex;
@@ -80,35 +80,37 @@
   align-items: center;
 }
 
-.editBookForm {
+.BookForm {
   display: flex;
   flex-direction: column;
 }
 
-.editBookFormRow {
+.BookFormRow {
   padding-bottom: 1em;
   display: flex;
 }
 
-.editBookFormRow > input {
+.BookFormRow > input {
   border: none;
   border-bottom: 1px solid black;
+  font-family: "Raleway", sans-serif;
 }
 
-.editBookFormRow > textarea {
+.BookFormRow > textarea {
   border: 1px solid black;
+  font-family: "Raleway", sans-serif;
 }
 
-.editBookFormLabel {
+.BookFormLabel {
   width: 7em;
 }
 
-.editBookDescription {
+.BookDescription {
   height: 8em;
   width: 11em;
 }
 
-.editBookSubmit {
+.BookSubmit {
   border: none;
   background-color: black;
   color: white;

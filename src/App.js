@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getBooks } from "./store/books";
 import { books } from "./books";
 import Navbar from "./Components/Navbar/Navbar";
@@ -12,11 +12,13 @@ function App() {
     dispatch(getBooks(books));
   }, [dispatch]);
 
+  const booksFromStore = useSelector((store) => store.books);
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar books={booksFromStore} />
       <div className="container">
-        <Books />
+        <Books books={booksFromStore} />
       </div>
     </div>
   );

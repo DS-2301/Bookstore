@@ -54,7 +54,7 @@ export default function Book({ book }) {
         <span className="bookPrice">{book.price}$</span>
       </div>
       <Modal
-        className="editBookModal"
+        className="BookModal"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
       >
@@ -64,12 +64,13 @@ export default function Book({ book }) {
             X
           </button>
         </div>
-        <form className="editBookForm" onSubmit={handleSubmit}>
-          <span className="editBookFormRow">
-            <label className="editBookFormLabel" htmlFor="name">
+        <form className="BookForm" onSubmit={handleSubmit}>
+          <span className="BookFormRow">
+            <label className="BookFormLabel" htmlFor="name">
               Name:
             </label>
             <input
+              required
               id="name"
               name="name"
               value={name}
@@ -79,11 +80,12 @@ export default function Book({ book }) {
             />
           </span>
 
-          <span className="editBookFormRow">
-            <label className="editBookFormLabel" htmlFor="price">
+          <span className="BookFormRow">
+            <label className="BookFormLabel" htmlFor="price">
               Price:
             </label>
             <input
+              required
               type="number"
               id="price"
               name="price"
@@ -94,11 +96,12 @@ export default function Book({ book }) {
             />
           </span>
 
-          <span className="editBookFormRow">
-            <label className="editBookFormLabel" htmlFor="category">
+          <span className="BookFormRow">
+            <label className="BookFormLabel" htmlFor="category">
               Category:
             </label>
             <input
+              required
               id="category"
               name="category"
               value={category}
@@ -107,12 +110,13 @@ export default function Book({ book }) {
               }}
             />
           </span>
-          <span className="editBookFormRow">
-            <label className="editBookFormLabel" htmlFor="description">
+          <span className="BookFormRow">
+            <label className="BookFormLabel" htmlFor="description">
               Description:
             </label>
             <textarea
-              className="editBookDescription"
+              required
+              className="BookDescription"
               id="description"
               name="description"
               value={description}
@@ -121,7 +125,7 @@ export default function Book({ book }) {
               }}
             />
           </span>
-          <button className="editBookSubmit" type="submit">
+          <button className="BookSubmit" type="submit">
             Submit
           </button>
         </form>

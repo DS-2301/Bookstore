@@ -7,3 +7,30 @@
   border-bottom: 1px solid black;
   align-items: center;
 }
+
+.addBookButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  left: 80%;
+  border: white;
+  border-radius: 0.1em;
+  width: 8em;
+  height: 1em;
+  background-color: white;
+  color: black;
+  font-size: 0.4em;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  transition: all 0.5s ease;
+  border: 1px solid white;
+  padding: 1em 0.2em;
+}
+
+.addBookButton:hover {
+  color: white;
+  background-color: black;
+}
